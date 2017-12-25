@@ -35,4 +35,8 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
+``` bash
+测试hexo分支
+```
+
 More info: [Deployment](https://hexo.io/docs/deployment.html)
