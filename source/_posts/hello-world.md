@@ -39,4 +39,8 @@ $ hexo deploy
 测试hexo分支
 ```
 
+``` bash
+多电脑测试
+```
+
 More info: [Deployment](https://hexo.io/docs/deployment.html)
