@@ -3,7 +3,7 @@ title: hexo搭建个人博客
 categories: 杂项
 ---
 
-# hexo搭建个人博客
+# hexo搭建个人博客 
 
 参考文章：
 
