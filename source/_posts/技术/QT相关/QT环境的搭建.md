@@ -21,6 +21,8 @@ tags:
 
 ### 3.安装windows sdk debuggers
 
+备注：下载 debuggers 要去官方网站下载iso文件来安装，并且要全部安装，不要只安装 debugger tool；现在用的版本是： Windows 10 SDK (10.0.16299.15)
+
 安装成功之后 QT Cretor的debuggers可以自动识别；如果不能可以手动添加即可。
 
 其他参考文章：
@@ -28,3 +30,4 @@ tags:
  [VS2017使用 创建Qt控制台应用程序项目](https://jingyan.baidu.com/article/20b68a889ca941796cec62b5.html)
 
  [VS2017专业版使用最新版Qt5.9.2教程](http://blog.csdn.net/qq_33154343/article/details/78587699)
+
