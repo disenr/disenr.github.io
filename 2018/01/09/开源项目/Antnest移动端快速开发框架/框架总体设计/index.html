@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="框架总体设计做这个框架的起源框架有什么用？开始搭建">
+<meta name="description" content="框架总体设计 简介   做这个框架的起源框架介绍 需要实现的功能  1.混合式开发框架:原生，Hybrid，React Native；原生为基础，实现交互性强、用户体验要高和其他方式无法完成的模块（如：地图、支付等）；Hybrid，增强webview的功能，提供原生调用web，web调用原生的能力，实现内容展示类模块（如：商城、新闻等）；React Native，介于两者之间，在框架提供的模块下，">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="框架总体设计">
 <meta property="og:url" content="http://yoursite.com/2018/01/09/开源项目/Antnest移动端快速开发框架/框架总体设计/index.html">
 <meta property="og:site_name" content="Disenr的博客">
-<meta property="og:description" content="框架总体设计做这个框架的起源框架有什么用？开始搭建">
+<meta property="og:description" content="框架总体设计 简介   做这个框架的起源框架介绍 需要实现的功能  1.混合式开发框架:原生，Hybrid，React Native；原生为基础，实现交互性强、用户体验要高和其他方式无法完成的模块（如：地图、支付等）；Hybrid，增强webview的功能，提供原生调用web，web调用原生的能力，实现内容展示类模块（如：商城、新闻等）；React Native，介于两者之间，在框架提供的模块下，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T02:48:49.019Z">
+<meta property="og:image" content="https://s1.ax2x.com/2018/02/01/h3wSX.png">
+<meta property="og:updated_time" content="2018-02-01T09:28:40.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="框架总体设计">
-<meta name="twitter:description" content="框架总体设计做这个框架的起源框架有什么用？开始搭建">
+<meta name="twitter:description" content="框架总体设计 简介   做这个框架的起源框架介绍 需要实现的功能  1.混合式开发框架:原生，Hybrid，React Native；原生为基础，实现交互性强、用户体验要高和其他方式无法完成的模块（如：地图、支付等）；Hybrid，增强webview的功能，提供原生调用web，web调用原生的能力，实现内容展示类模块（如：商城、新闻等）；React Native，介于两者之间，在框架提供的模块下，">
+<meta name="twitter:image" content="https://s1.ax2x.com/2018/02/01/h3wSX.png">
 
 
 
@@ -382,7 +384,159 @@
       
 
       
-        <h1 id="框架总体设计"><a href="#框架总体设计" class="headerlink" title="框架总体设计"></a>框架总体设计</h1><h2 id="做这个框架的起源"><a href="#做这个框架的起源" class="headerlink" title="做这个框架的起源"></a>做这个框架的起源</h2><h2 id="框架有什么用？"><a href="#框架有什么用？" class="headerlink" title="框架有什么用？"></a>框架有什么用？</h2><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2>
+        <h1 id="框架总体设计"><a href="#框架总体设计" class="headerlink" title="框架总体设计"></a>框架总体设计</h1><ul>
+<li>简介</li>
+</ul>
+<p><a href="https://simimg.com/i/h3wSX" target="_blank" rel="noopener"><img src="https://s1.ax2x.com/2018/02/01/h3wSX.png" alt="h3wSX.png"></a></p>
+<h2 id="做这个框架的起源"><a href="#做这个框架的起源" class="headerlink" title="做这个框架的起源"></a>做这个框架的起源</h2><h2 id="框架介绍"><a href="#框架介绍" class="headerlink" title="框架介绍"></a>框架介绍</h2><blockquote>
+<p>需要实现的功能</p>
+</blockquote>
+<pre><code>1.混合式开发框架:原生，Hybrid，React Native；原生为基础，实现交互性强、用户体验要高和其他方式无法完成的模块（如：地图、支付等）；Hybrid，增强webview的功能，提供原生调用web，web调用原生的能力，实现内容展示类模块（如：商城、新闻等）；React Native，介于两者之间，在框架提供的模块下，方便前端人员开发原生模块；后两者的目的都在于一次开发，多平台运行（Android、iOS、H5）。
+
+2.原生基础模块和组件：实现在依赖框架的情况下，能够快速实现业务；包括UI框架、网络框架、开发模式框架、工具类等。
+
+3.单元测试与集成测试（自动化测试）：单元测试需要完成在无后端支持的情况下，进行数据调试；集成测试需要完成，自动化对系统进行压力测试和白盒测试。
+
+4.打包与集成上线：实现多渠道多ID自动化打包并集成到测试服务器
+</code></pre><blockquote>
+<p>技术栈</p>
+</blockquote>
+<pre><code>1.Android(java kotlin)
+2.IOS(object*c swift4)
+3.H5(jquery react)
+4.ReactNative(react)
+</code></pre><blockquote>
+<p>规范</p>
+</blockquote>
+<pre><code>1.结构规范
+2.命名规范
+3.注释规范
+4.素材管理规范
+</code></pre><p><a href="https://juejin.im/post/5a24ec145188254dd9363b81" target="_blank" rel="noopener">Android 开发规范</a>    </p>
+<h2 id="核心框架搭建"><a href="#核心框架搭建" class="headerlink" title="核心框架搭建"></a>核心框架搭建</h2><h3 id="基础类"><a href="#基础类" class="headerlink" title="基础类"></a>基础类</h3><h3 id="UI框架"><a href="#UI框架" class="headerlink" title="UI框架"></a>UI框架</h3><ul>
+<li><p>对话框组件</p>
+<p>BottomSheet</p>
+<p>Popup</p>
+<p>Toast</p>
+<p>Alert</p>
+<p>Confirm</p>
+<p>Loading</p>
+</li>
+<li><p>列表组件</p>
+<p>下拉刷新</p>
+<p>滚动加载</p>
+<p>侧滑删除</p>
+<p>单选、多选</p>
+</li>
+<li><p>按钮</p>
+</li>
+<li>文本</li>
+<li>编辑框</li>
+<li>Tab</li>
+<li>TitleBar</li>
+<li>Picker</li>
+<li>侧滑组件</li>
+<li>滑动组件</li>
+<li>图片选择/剪裁</li>
+<li>进度条</li>
+<li>徽章</li>
+<li>二维码/条纹码扫描  </li>
+<li>状态机组件  <h3 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h3></li>
+<li>基础对象工具类</li>
+<li>文件工具类</li>
+<li>图像工具类</li>
+<li>设备工具类</li>
+<li>加密解密工具类</li>
+<li>…<h3 id="网络框架"><a href="#网络框架" class="headerlink" title="网络框架"></a>网络框架</h3></li>
+<li>基础网络请求</li>
+<li>网络状态码处理</li>
+<li>文件上传/下载</li>
+</ul>
+<h3 id="图片处理"><a href="#图片处理" class="headerlink" title="图片处理"></a>图片处理</h3><ul>
+<li>图片处理（圆角处理等）</li>
+<li>图片加载缓存（解决列表加载图片流畅性）</li>
+<li>本地图片选择器（图片选择，剪裁，压缩）</li>
+<li>图片预览（图片预览，保存） <h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><h3 id="Log管理"><a href="#Log管理" class="headerlink" title="Log管理"></a>Log管理</h3></li>
+<li>优雅的日志输出</li>
+<li>可以切换是否启用<h3 id="BUG反馈"><a href="#BUG反馈" class="headerlink" title="BUG反馈"></a>BUG反馈</h3></li>
+<li>bug拦截并反馈到开发者<h3 id="系统权限"><a href="#系统权限" class="headerlink" title="系统权限"></a>系统权限</h3></li>
+<li>Android 动态权限申请</li>
+<li>ios权限申请<h3 id="事件总线"><a href="#事件总线" class="headerlink" title="事件总线"></a>事件总线</h3></li>
+<li>系统内部消息通信<h3 id="路由框架"><a href="#路由框架" class="headerlink" title="路由框架"></a>路由框架</h3><h3 id="模块化、插件化"><a href="#模块化、插件化" class="headerlink" title="模块化、插件化"></a>模块化、插件化</h3><h3 id="混合式框架"><a href="#混合式框架" class="headerlink" title="混合式框架"></a>混合式框架</h3></li>
+<li><p>原生组件能力</p>
+<p> webview功能拓展</p>
+<p> 原生UI组件（title,toast,loading,picker…）</p>
+<p> 原生地图</p>
+<p> 原生支付</p>
+<p> 相机（图片上传,扫一扫）</p>
+</li>
+<li>缓存管理</li>
+<li>动态更新  <h3 id="主题框架"><a href="#主题框架" class="headerlink" title="主题框架"></a>主题框架</h3></li>
+<li>换肤功能</li>
+<li>皮肤包<h3 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h3></li>
+<li>MVP<h3 id="响应式编程"><a href="#响应式编程" class="headerlink" title="响应式编程"></a>响应式编程</h3></li>
+<li>基于rx一系列方案<h3 id="内存检测"><a href="#内存检测" class="headerlink" title="内存检测"></a>内存检测</h3><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2></li>
+</ul>
+<h2 id="打包集成"><a href="#打包集成" class="headerlink" title="打包集成"></a>打包集成</h2><p><a href="https://juejin.im/post/5a28fcb66fb9a0450c494d9c" target="_blank" rel="noopener">大型Android项目的工程化之路：编译与构建</a></p>
+<p><a href="http://blog.csdn.net/wangmuming/article/details/22924815" target="_blank" rel="noopener">jenkins</a></p>
+<h2 id="开源组件"><a href="#开源组件" class="headerlink" title="开源组件"></a>开源组件</h2><h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p>  <a href="http://tangram.pingguohe.net/" target="_blank" rel="noopener">Tangram</a> 阿里巴巴天猫团队出品，用于构件动态页面；商城等页面适合</p>
+<p>  <a href="https://github.com/QMUI/QMUI_Android" target="_blank" rel="noopener">QMUI_Android</a> 腾讯UX团队出品，提供基础的UI组件</p>
+<p>  <a href="https://github.com/H07000223/FlycoTabLayout" target="_blank" rel="noopener">FlycoTabLayout</a> 集成各种tab样式</p>
+<p>  <a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="noopener">AVLoadingIndicatorView</a> 一些加载动画</p>
+<p>  <a href="https://github.com/ksoichiro/Android-ObservableScrollView" target="_blank" rel="noopener">Android-ObservableScrollView</a> 滚动视图UI</p>
+<p>  <a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="noopener">BaseRecyclerViewAdapterHelper</a> 强大的列表组件</p>
+<p>  <a href="https://github.com/daimajia/AndroidSwipeLayout" target="_blank" rel="noopener">AndroidSwipeLayout</a> 滑动更多操作UI</p>
+<p>  <a href="https://github.com/bingoogolapple" target="_blank" rel="noopener">BGA</a> bga系列UI组件，下拉刷新，滚动加载，徽章，banner，二维码扫描等</p>
+<p>  <a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="noopener">工具类集合</a> 各种工具类</p>
+<p>  <a href="https://github.com/square/leakcanary" target="_blank" rel="noopener">Leakcanary</a> 内存泄露检测</p>
+<p>  <a href="https://github.com/ximsfei/Android-skin-support" target="_blank" rel="noopener">Android-skin-support</a> 换肤插件</p>
+<p>  <a href="https://github.com/alibaba/freeline" target="_blank" rel="noopener">freeline</a> 阿里巴巴团队出品，Android秒级编译方案</p>
+<p>  <a href="https://github.com/orhanobut/logger" target="_blank" rel="noopener">logger</a> 优雅的日志输出</p>
+<p>  <a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="noopener">butterknife</a> View注入框架，view代码的书写量</p>
+<p>  <a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="noopener">AndroidViewAnimations</a> 动画库</p>
+<p>  <a href="https://github.com/laobie/StatusBarUtil" target="_blank" rel="noopener">StatusBarUtil</a> 一行代码实现沉浸式顶栏</p>
+<p>  <a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">ARouter</a>阿里巴巴出品，Android路由框架</p>
+<p>  <a href="https://github.com/PhilJay/MPAndroidChart" target="_blank" rel="noopener">MPAndroidChart</a> 强大的图表框架</p>
+<p>  <a href="https://github.com/lzyzsd/JsBridge" target="_blank" rel="noopener">JsBridge</a> webview桥接框架</p>
+<p>  <a href="https://github.com/greenrobot/greenDAO" target="_blank" rel="noopener">greenDAO</a> 数据库</p>
+<p>  <a href="https://github.com/square/retrofit" target="_blank" rel="noopener">retrofit</a> 网络框架</p>
+<p>  <a href="https://github.com/alibaba/fastjson" target="_blank" rel="noopener">fastjson</a> json解析库</p>
+<p>  <a href="https://github.com/ReactiveX" target="_blank" rel="noopener">ReactiveX</a> rx全家桶，响应式编程</p>
+<h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><p>  <a href="https://github.com/youngsoft/TangramKit" target="_blank" rel="noopener">TangramKit</a>实现用Android的布局思维布局iOS页面</p>
+<p>  <a href="https://github.com/QMUI/QMUI_iOS" target="_blank" rel="noopener">QMUI_iOS</a> 腾讯UX团队出品，提供基础的UI组件</p>
+<p>  <a href="http://tangram.pingguohe.net/" target="_blank" rel="noopener">Tangram</a> 阿里巴巴天猫团队出品，用于构件动态页面；商城等页面适合</p>
+<p>  <a href="https://github.com/erichoracek/MSDynamicsDrawerViewController" target="_blank" rel="noopener">MSDynamicsDrawerViewController</a> 侧滑菜单</p>
+<p>  <a href="https://github.com/dekatotoro/SlideMenuControllerSwift" target="_blank" rel="noopener">SlideMenuControllerSwift</a> 侧滑菜单</p>
+<p>  <a href="https://github.com/ninjinkun/NJKWebViewProgress" target="_blank" rel="noopener">NJKWebViewProgress</a> 加载进度条</p>
+<p>  <a href="https://github.com/CoderMJLee/MJRefresh" target="_blank" rel="noopener">MJRefresh</a> 下拉刷新，滚动加载</p>
+<p>  <a href="https://github.com/weng1250/WZLBadge" target="_blank" rel="noopener">WZLBadge</a> 徽章</p>
+<p>  <a href="https://github.com/ninjaprox/NVActivityIndicatorView" target="_blank" rel="noopener">NVActivityIndicatorView</a>一些加载动画效果</p>
+<p>  <a href="https://github.com/bfeher" target="_blank" rel="noopener">BF系列</a> 按钮 CheckBox 等UI组件</p>
+<p>  <a href="https://github.com/andreamazz/AMScrollingNavbar" target="_blank" rel="noopener">AMScrollingNavbar</a>滚动组件</p>
+<p>  <a href="https://github.com/xmartlabs/XLPagerTabStrip" target="_blank" rel="noopener">XLPagerTabStrip</a>仿Android tab</p>
+<p>  <a href="https://github.com/CoderMJLee/MJExtension" target="_blank" rel="noopener">MJExtension</a> 字典对象转换工具</p>
+<p>  <a href="https://github.com/dzenbot/DZNEmptyDataSet" target="_blank" rel="noopener">DZNEmptyDataSet</a> 空数据显示框架</p>
+<p>  <a href="https://github.com/rs/SDWebImage" target="_blank" rel="noopener">SDWebImage</a>图片加载缓存框架</p>
+<p>  <a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="noopener">IQKeyboardManager</a>键盘管理工具</p>
+<p>  <a href="https://github.com/rickytan/RTRootNavigationController" target="_blank" rel="noopener">RTRootNavigationController</a> 导航控制器</p>
+<p>  <a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="noopener">WebViewJavascriptBridge</a> webview桥接框架</p>
+<p>  <a href="https://github.com/joeldev/JLRoutes" target="_blank" rel="noopener">JLRoutes</a> 路由框架</p>
+<p>  <a href="https://github.com/danielgindi/Charts" target="_blank" rel="noopener">Charts</a>图表框架</p>
+<p>  <a href="https://github.com/MengTo/Spring" target="_blank" rel="noopener">Spring</a> 动画框架</p>
+<p>  <a href="https://github.com/Alamofire/Alamofire" target="_blank" rel="noopener">Alamofire</a> 网络框架</p>
+<p>  <a href="https://github.com/Moya/Moya" target="_blank" rel="noopener">Moya</a> 网络框架</p>
+<p>  <a href="https://github.com/stephencelis/SQLite.swift" target="_blank" rel="noopener">SQLite.swift</a> 数据库框架</p>
+<p>  <a href="https://github.com/DaveWoodCom/XCGLogger" target="_blank" rel="noopener">XCGLogger</a> 日志框架</p>
+<p>  <a href="https://github.com/Hearst-DD/ObjectMapper" target="_blank" rel="noopener">ObjectMapper</a> 字典对象转换</p>
+<p>  <a href="https://github.com/ReactiveX/RxSwift" target="_blank" rel="noopener">RxSwift</a> 响应式编程</p>
+<h2 id="框架加载方案"><a href="#框架加载方案" class="headerlink" title="框架加载方案"></a>框架加载方案</h2><p>  Android使用gradle加载第三方库和私有库（私有库拆分为框架库(core)和业务框架库）。 </p>
+<p>  IOS使用cocoapods加载第三方库和私有库（私有库拆分为框架库(core)和业务框架库）。 </p>
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><p>  确定模块与模块关系 -&gt; 选择类库 -&gt;  确定开发方式（原生，h5…）-&gt; 确定资源（UI资源存放与调用）-&gt; 业务开发 -&gt; 测试 -&gt; 集成上线</p>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
+<li>2018-01-10 添加大致目录结构  </li>
+<li>2018-01-11 细化目录，添加开源库  </li>
+</ul>
+
       
     </div>
     
@@ -412,8 +566,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/09/好玩的/hexo搭建个人博客/" rel="next" title="hexo搭建个人博客">
-                <i class="fa fa-chevron-left"></i> hexo搭建个人博客
+              <a href="/2018/01/09/好玩的/写给2018的自己/" rel="next" title="写给2018的自己">
+                <i class="fa fa-chevron-left"></i> 写给2018的自己
               </a>
             
           </div>
@@ -505,7 +659,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,7 +670,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -527,7 +681,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -588,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#框架总体设计"><span class="nav-number">1.</span> <span class="nav-text">框架总体设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#做这个框架的起源"><span class="nav-number">1.1.</span> <span class="nav-text">做这个框架的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架有什么用？"><span class="nav-number">1.2.</span> <span class="nav-text">框架有什么用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搭建"><span class="nav-number">1.3.</span> <span class="nav-text">开始搭建</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#框架总体设计"><span class="nav-number">1.</span> <span class="nav-text">框架总体设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#做这个框架的起源"><span class="nav-number">1.1.</span> <span class="nav-text">做这个框架的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架介绍"><span class="nav-number">1.2.</span> <span class="nav-text">框架介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心框架搭建"><span class="nav-number">1.3.</span> <span class="nav-text">核心框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础类"><span class="nav-number">1.3.1.</span> <span class="nav-text">基础类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI框架"><span class="nav-number">1.3.2.</span> <span class="nav-text">UI框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具类"><span class="nav-number">1.3.3.</span> <span class="nav-text">工具类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络框架"><span class="nav-number">1.3.4.</span> <span class="nav-text">网络框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片处理"><span class="nav-number">1.3.5.</span> <span class="nav-text">图片处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件处理"><span class="nav-number">1.3.6.</span> <span class="nav-text">文件处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Log管理"><span class="nav-number">1.3.7.</span> <span class="nav-text">Log管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BUG反馈"><span class="nav-number">1.3.8.</span> <span class="nav-text">BUG反馈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统权限"><span class="nav-number">1.3.9.</span> <span class="nav-text">系统权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件总线"><span class="nav-number">1.3.10.</span> <span class="nav-text">事件总线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由框架"><span class="nav-number">1.3.11.</span> <span class="nav-text">路由框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块化、插件化"><span class="nav-number">1.3.12.</span> <span class="nav-text">模块化、插件化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合式框架"><span class="nav-number">1.3.13.</span> <span class="nav-text">混合式框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题框架"><span class="nav-number">1.3.14.</span> <span class="nav-text">主题框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发模式"><span class="nav-number">1.3.15.</span> <span class="nav-text">开发模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式编程"><span class="nav-number">1.3.16.</span> <span class="nav-text">响应式编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存检测"><span class="nav-number">1.3.17.</span> <span class="nav-text">内存检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">1.4.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包集成"><span class="nav-number">1.5.</span> <span class="nav-text">打包集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开源组件"><span class="nav-number">1.6.</span> <span class="nav-text">开源组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.6.1.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS"><span class="nav-number">1.6.2.</span> <span class="nav-text">IOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架加载方案"><span class="nav-number">1.7.</span> <span class="nav-text">框架加载方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发流程"><span class="nav-number">1.8.</span> <span class="nav-text">开发流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新日志"><span class="nav-number">2.</span> <span class="nav-text">更新日志</span></a></li></ol></div>
             
 
           </div>
