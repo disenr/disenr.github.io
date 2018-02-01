@@ -1,3 +1,4 @@
+---
 title: QT环境的搭建
 categories: QT相关
 tags:
